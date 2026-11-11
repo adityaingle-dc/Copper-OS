@@ -1,0 +1,186 @@
+export const initialStudioData = {
+  projects: [
+    {
+      id: "proj-1",
+      title: "Solarium Penthouse",
+      client: "Vanguard Properties",
+      stage: "In Review",
+      fill: 75,
+      stamp: "IN REVIEW",
+      color: "#D48B60",
+      budget: "$24,500",
+      dueDate: "Nov 18",
+      thumbnail: "linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%)",
+    },
+    {
+      id: "proj-2",
+      title: "Aura Boutique Hotel",
+      client: "Aura Hospitality",
+      stage: "Delivered",
+      fill: 100,
+      stamp: "DELIVERED",
+      color: "#22C55E",
+      budget: "$38,000",
+      dueDate: "Delivered",
+      thumbnail: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+    },
+    {
+      id: "proj-3",
+      title: "Copper Loft Studio",
+      client: "Self Initiative",
+      stage: "In Progress",
+      fill: 50,
+      stamp: "IN PROGRESS",
+      color: "#A96C4B",
+      budget: "$15,200",
+      dueDate: "Dec 02",
+      thumbnail: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+    },
+    {
+      id: "proj-4",
+      title: "Komorebi Tea House",
+      client: "Kyoto Living",
+      stage: "Concept",
+      fill: 20,
+      stamp: "CONCEPT",
+      color: "#EAB308",
+      budget: "$19,800",
+      dueDate: "Dec 15",
+      thumbnail: "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)",
+    },
+  ],
+
+  tasks: [
+    {
+      id: "task-1",
+      title: "Finalize timber beam detail specs",
+      project: "Solarium Penthouse",
+      assignedDeskId: "desk-1",
+      color: "#FEF08A", // yellow sticky
+      tag: "Architecture",
+      priority: "High",
+      done: false,
+    },
+    {
+      id: "task-2",
+      title: "Render twilight exterior walkthrough",
+      project: "Aura Boutique Hotel",
+      assignedDeskId: "desk-2",
+      color: "#FED7AA", // peach sticky
+      tag: "3D Visuals",
+      priority: "Medium",
+      done: true,
+    },
+    {
+      id: "task-3",
+      title: "Source terrazzo samples for kitchen",
+      project: "Copper Loft Studio",
+      assignedDeskId: "desk-4",
+      color: "#BBF7D0", // mint sticky
+      tag: "Interior",
+      priority: "Low",
+      done: false,
+    },
+    {
+      id: "task-4",
+      title: "Prepare brand moodboard presentation",
+      project: "Komorebi Tea House",
+      assignedDeskId: "desk-3",
+      color: "#FBCFE8", // rose sticky
+      tag: "Branding",
+      priority: "High",
+      done: false,
+    },
+    {
+      id: "task-5",
+      title: "Review MEP engineering drawings",
+      project: "Solarium Penthouse",
+      assignedDeskId: null, // unassigned sticky on board
+      color: "#DDD6FE", // lavender sticky
+      tag: "Engineering",
+      priority: "High",
+      done: false,
+    },
+    {
+      id: "task-6",
+      title: "Acoustic baffle sample catalog",
+      project: "Copper Loft Studio",
+      assignedDeskId: null, // unassigned sticky on board
+      color: "#FEF08A",
+      tag: "Interior",
+      priority: "Medium",
+      done: false,
+    },
+  ],
+
+  staff: [
+    {
+      id: "desk-1",
+      name: "Elena Vance",
+      role: "Lead Architect",
+      status: "At Desk",
+      avatarBg: "#E0E7FF",
+      avatarColor: "#4338CA",
+      initials: "EV",
+      deskLabel: "Station 01",
+      currentTask: "Timber beam detail specs",
+    },
+    {
+      id: "desk-2",
+      name: "Marco Rossi",
+      role: "3D Visualizer",
+      status: "At Desk",
+      avatarBg: "#FEF3C7",
+      avatarColor: "#B45309",
+      initials: "MR",
+      deskLabel: "Station 02",
+      currentTask: "3D Photoreal Renders",
+    },
+    {
+      id: "desk-3",
+      name: "Sarah Lin",
+      role: "Brand Strategist",
+      status: "In Meeting",
+      avatarBg: "#FCE7F3",
+      avatarColor: "#BE185D",
+      initials: "SL",
+      deskLabel: "Station 03",
+      currentTask: "Client presentation",
+    },
+    {
+      id: "desk-4",
+      name: "Dev Patel",
+      role: "Interior Designer",
+      status: "At Desk",
+      avatarBg: "#DCFCE7",
+      avatarColor: "#15803D",
+      initials: "DP",
+      deskLabel: "Station 04",
+      currentTask: "Material finishes",
+    },
+  ],
+
+  jar: {
+    monthlyTarget: 50000,
+    currentAmount: 41250,
+    currency: "USD",
+    recentPayments: [
+      { id: "pay-1", client: "Aura Hospitality", amount: 12500, date: "Today", project: "Aura Hotel Final Milestone" },
+      { id: "pay-2", client: "Vanguard Properties", amount: 8000, date: "Yesterday", project: "Solarium Retainer" },
+      { id: "pay-3", client: "Kyoto Living", amount: 5500, date: "Nov 04", project: "Tea House Phase 1" },
+    ],
+  },
+
+  documents: [
+    { id: "doc-1", title: "Solarium Agreement v3.pdf", type: "Contract", client: "Vanguard", status: "Signed", size: "2.4 MB" },
+    { id: "doc-2", title: "Aura Hotel Completion Cert.pdf", type: "Approval", client: "Aura Hospitality", status: "Approved", size: "1.1 MB" },
+    { id: "doc-3", title: "Tea House Concept Proposal.pdf", type: "Proposal", client: "Kyoto Living", status: "Awaiting Signature", size: "4.8 MB" },
+    { id: "doc-4", title: "Copper Studio Q4 Tax Summary.pdf", type: "Tax & Legal", client: "Internal", status: "Archived", size: "860 KB" },
+  ],
+
+  meetings: [
+    { id: "meet-1", title: "Design Sprint: Tea House Facade", time: "2:30 PM", attendees: ["Elena", "Sarah", "Client"], location: "Round Table A" },
+    { id: "meet-2", title: "Weekly Studio Sync & Champagne Toast", time: "5:00 PM", attendees: ["All Hands"], location: "Main Studio Floor" },
+  ],
+}
+
